@@ -5,7 +5,7 @@
     <p id="timer">時間: <span>0</span></p>
   </header>
   <div id="game">
-    <div id="numbers"></div>
+    <div id="numbers" @click="hit"></div>
     <div id="startScene">
       <p></p>
       <button @click="play">開始</button>
@@ -15,22 +15,32 @@
 </template>
 <script>
  export default{   
-
  data(){
  return{
     countNum:1,
  	cardArray:[],
  	time:0,
    timer:null,
-   cardNum:null,
+	 cardNum:null,
+	 num:0
  };
  },
 
 methods:{
   play(){  
-		$("#startScene").hide();	
-   }
-} ,
+		$("#startScene").hide();
+	}
+	,
+	hit(){
+		 this.num = $("#numbers div").html();
+		 console.log(this.num)
+	 },
+	 
+	},
+
+
+
+
 mounted() {
   for(var i = 0; i <= 8; i++){
 			this.cardArray.push(i);
@@ -78,7 +88,7 @@ h1{
 #game{
 	position:relative;
 }
-#numbers div{
+ #numbers /deep/ div{
 	width:179px;
 	height:107px;
 	padding-top:35px;
