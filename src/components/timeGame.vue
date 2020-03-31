@@ -5,7 +5,7 @@
     <p id="timer">時間: <span>0</span></p>
   </header>
   <div id="game">
-    <div id="numbers" @click="hit"></div>
+    <div id="numbers" @click="hit($event)"></div>
     <div id="startScene">
       <p></p>
       <button @click="play">開始</button>
@@ -31,10 +31,16 @@ methods:{
 		$("#startScene").hide();
 	}
 	,
-	hit(){
-		 this.num = $("#numbers div").html();
+	hit(e){
+		 this.num = e.target.textContent;
 		 console.log(this.num)
-	 },
+		 console.log(this.countNum)
+ if(this.num == this.countNum){
+			//  e.target.className="hit"
+     e.target.setAttribute('class','hit')
+			this.countNum++;	
+					}
+	 }
 	 
 	},
 
@@ -102,10 +108,15 @@ h1{
 	float:left;
 	cursor:pointer;
 }
-#numbers div.hit{
-	background:#E27C1C;
-	color:#FEC617;
+
+
+.hit{
+	background:red;
+	color:blue;
 }
+
+
+
 #startScene{
 	position:absolute;
 	top:0;
