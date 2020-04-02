@@ -39,14 +39,24 @@ created() {
   this.sec += 1;
   },1000);
   
- $(document).ready(function(){$(".cir1").click(function (evt) {
-    var spot = $("<div class=spot></div>");
-    spot.css({"left":evt.pageX +40- $(this).offset().left+"px"},
-      {"top": evt.pageY +40- $(this).offset().top+"px"});
-    $(this).append(spot);
-    console.log("aaa")
+ $(document).ready(function(){
+  $(".cir5").click(function (evt) {
+  var spot = $("<div class='spot'></div>");
+  spot.css({
+   "left":evt.pageX +40- $(this).offset().left+"px",
+   "top": evt.pageY +40- $(this).offset().top+"px",
+   "position": "absolute",
+   "width": 15+"px",
+   "height": 15+"px",
+   "border-radius": 50+"%",
+   "background-color": "rgba(0, 0, 0, 0.4)",
+   "z-index": 50,
+   });
+  $(this).append(spot);
   })
-      })
+ })
+
+
 }
 
 
@@ -158,14 +168,14 @@ created() {
     font-size: 18px;
   }
   }
-  .spot {
+   /* .spot {
     position: absolute;
     width: 15px;
     height: 15px;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.4);
      z-index: 50; 
-  }
+  }  */
    a, a.link {
   display: block;
   padding: 33px 0 0 0;

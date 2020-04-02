@@ -5,7 +5,14 @@
     <p id="timer">時間: <span>0</span></p>
   </header>
   <div id="game">
-    <div id="numbers" @click="hit($event)"></div>
+     <div id="numbers" @click="hit($event)"></div> 
+
+   <!-- <div id="numbers">
+		 <div v-for="(n,idx) in 10" :key="idx" :style="{'color':'red'}"> {{n}}</div>
+	 </div> -->
+   
+	 
+
     <div id="startScene">
       <p></p>
       <button @click="play">開始</button>
@@ -36,7 +43,6 @@ methods:{
 		 console.log(this.num)
 		 console.log(this.countNum)
  if(this.num == this.countNum){
-			//  e.target.className="hit"
      e.target.setAttribute('class','hit')
 			this.countNum++;	
 					}
@@ -111,8 +117,8 @@ h1{
 
 
 .hit{
-	background:red;
-	color:blue;
+	background:red !important;
+	color:blue !important;
 }
 
 
