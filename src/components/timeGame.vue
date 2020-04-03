@@ -3,15 +3,17 @@
   <header>
     <p id="record">最好記錄 : <span>0</span></p>
     <p id="timer">時間: <span>0</span></p>
+	
+		<!-- <div :class="change">jkljkjlj</div> -->
   </header>
   <div id="game">
-     <div id="numbers" @click="hit($event)"></div> 
+     <div id="numbers" @click="hit($event)"></div>  
 
-   <!-- <div id="numbers">
-		 <div v-for="(n,idx) in 10" :key="idx" :style="{'color':'red'}"> {{n}}</div>
-	 </div> -->
-   
-	 
+    <!-- <div id="numbers">
+		 <div v-for="(n,idx) in 10" :key="idx" :class="change"> {{n}}</div>
+	 </div> 
+    -->
+	
 
     <div id="startScene">
       <p></p>
@@ -29,7 +31,10 @@
  	time:0,
    timer:null,
 	 cardNum:null,
-	 num:0
+	 num:0,
+
+
+	 ok:true
  };
  },
 
@@ -71,7 +76,8 @@ mounted() {
  }
  }
 </script>
-<style scoped>
+<style lang ="scss" scoped>
+ @import  '@/assets/_timeGame.scss';
  #wrapper{	width:542px;	margin:0 auto;
 }
 header{
@@ -85,13 +91,13 @@ h1{
 	text-align:center;
 	font-size:3em;
 }
-#timer{
+/* #timer{
 	font-size:1.3em;
 	position:absolute;
 	text-align:center;
 	right:0;
 	bottom:0;
-}
+} */
 #record{
 	font-size:1.3em;
 	position:absolute;
@@ -116,11 +122,16 @@ h1{
 }
 
 
-.hit{
+ /* .hit{
 	background:red !important;
 	color:blue !important;
-}
+}  */
 
+/* .change{
+	background: red;
+	color: chartreuse;
+	width: 50px;
+} */
 
 
 #startScene{

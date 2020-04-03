@@ -2,7 +2,10 @@
 
  <ul>
  <li v-for="(item,index) in arr" :key="index" :class="{red:index==indexPrev}"         
- v-on:click="changeColor(index)">{{item}}</li></ul>   
+ @click="changeColor(index)">   {{item}}
+ 
+
+ </li></ul>   
 </template>
 <script>
 export default {
