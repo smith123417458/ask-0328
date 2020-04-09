@@ -2,7 +2,7 @@
 <div id="wrapper">
   <header>
     <p id="record">最好記錄 : <span>0</span></p>
-    <p id="timer">時間: <span>0</span></p>
+    <p id="timer">時間: <span>{{sec}}</span></p>
 	
 		<!-- <div :class="change">jkljkjlj</div> -->
   </header>
@@ -32,8 +32,8 @@
    timer:null,
 	 cardNum:null,
 	 num:0,
-
-
+   timer:null,
+   sec:0,
 	 ok:true
  };
  },
@@ -50,12 +50,31 @@ methods:{
  if(this.num == this.countNum){
      e.target.setAttribute('class','hit')
 			this.countNum++;	
-					}
-	 }
-	 
+					};
+	  if(this.timer ==null){
+		this.timer = setInterval(
+		()=>{this.sec += 1;},100);}
+		
+		if(this.countNum>9){
+		 clearInterval(this.timer)
+		 this.timer=null
+		 console.log("停止")
+		 alert("你的優惠碼是17458")
+		}
+	 },
 	},
 
+//  watch:{
 
+//  stop(){
+
+//  }
+	
+ 	
+
+//  }
+
+//  ,
 
 
 mounted() {
@@ -77,7 +96,7 @@ mounted() {
  }
 </script>
 <style lang ="scss" scoped>
- @import  '@/assets/_timeGame.scss';
+ /* @import  '@/assets/_timeGame.scss'; */
  #wrapper{	width:542px;	margin:0 auto;
 }
 header{

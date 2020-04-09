@@ -94,7 +94,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import "~bootstrap/scss/bootstrap";
+// @import "~bootstrap/scss/bootstrap";
+@import "./assets/all";
 .jumbotron-bg {
   /* banners.png */
   background: url('https://images.unsplash.com/photo-1477901492169-d59e6428fc90?w=1350');

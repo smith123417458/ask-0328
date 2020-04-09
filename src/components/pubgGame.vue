@@ -46,10 +46,15 @@ created() {
    "left":evt.pageX +40- $(this).offset().left+"px",
    "top": evt.pageY +40- $(this).offset().top+"px",
    "position": "absolute",
-   "width": 15+"px",
-   "height": 15+"px",
-   "border-radius": 50+"%",
-   "background-color": "rgba(0, 0, 0, 0.4)",
+  //  "width": 15+"px",
+  //  "height": 15+"px",
+  //  "border-radius": 50+"%",
+  //  "background-color": "rgba(0, 0, 0, 0.4)",
+   "width": 40+"px",
+   "height": 38+"px",
+   "background-image":"url('../assets/img/hole.png')",
+   "pointer-events":"none",
+
    "z-index": 50,
    });
   $(this).append(spot);
@@ -70,7 +75,8 @@ created() {
 
   body {
    
-    background-image: url(https://i.imgur.com/nTYSTCp.jpg); 
+    /* background-image: url(https://i.imgur.com/nTYSTCp.jpg);  */
+    background-image: url('../assets/img/002.jpg'); 
     margin: 0;
     width: 100%;
     height: 100vh;

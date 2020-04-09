@@ -38,8 +38,8 @@
             </form>
 
             <!-- <h1><a href="test.html">點我連結</a></h1> -->
-               <!-- <router-link to="/game" class="btn btn-primary"> 打靶開始 </router-link>   -->
-             <router-link to="/secondGame" class="btn btn-primary"> 計時遊戲開始 </router-link>
+                 <router-link to="/game" class="btn btn-primary"> 打靶開始 </router-link>   
+             <!-- <router-link to="/secondGame" class="btn btn-primary"> 計時遊戲開始 </router-link> -->
               <!-- <router-link to="/secondGame22" class="btn btn-primary"> 計時遊戲2開始 </router-link>  -->
 
             <button class="btn btn-outline-primary ml-auto" type="button"
